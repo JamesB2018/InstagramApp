@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".SearchActivity"/>
-        <activity android:name=".ShareActivity"/>
-        <activity android:name=".LikeActivity"/>
-        <activity android:name=".ProfileActivity">
+        <activity android:name=".Home.MainActivity"/>
+        <activity android:name=".Search.SearchActivity"/>
+        <activity android:name=".Share.ShareActivity"/>
+        <activity android:name=".Likes.LikeActivity"/>
+        <activity android:name=".Profile.ProfileActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

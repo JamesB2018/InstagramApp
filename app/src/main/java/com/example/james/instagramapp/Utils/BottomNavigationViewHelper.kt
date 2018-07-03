@@ -6,8 +6,12 @@ import android.util.Log
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 import android.content.Intent
 import android.support.design.widget.BottomNavigationView
-import android.view.MenuItem
 import com.example.james.instagramapp.*
+import com.example.james.instagramapp.Home.MainActivity
+import com.example.james.instagramapp.Likes.LikeActivity
+import com.example.james.instagramapp.Profile.ProfileActivity
+import com.example.james.instagramapp.Search.SearchActivity
+import com.example.james.instagramapp.Share.ShareActivity
 
 
 object BottomNavigationViewHelper {
