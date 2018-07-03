@@ -23,39 +23,37 @@ object BottomNavigationViewHelper {
     }
 
     fun enableNavigation(context: Context, view: BottomNavigationViewEx) {
-        view.onNavigationItemSelectedListener = object : BottomNavigationView.OnNavigationItemSelectedListener {
-            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-                when (item.itemId) {
+        view.onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
 
-                    R.id.ic_house -> {
-                        val intent1 = Intent(context, MainActivity::class.java)//ACTIVITY_NUM = 0
-                        context.startActivity(intent1)
-                    }
-
-                    R.id.ic_search -> {
-                        val intent2 = Intent(context, SearchActivity::class.java)//ACTIVITY_NUM = 1
-                        context.startActivity(intent2)
-                    }
-
-                    R.id.ic_circle -> {
-                        val intent3 = Intent(context, ShareActivity::class.java)//ACTIVITY_NUM = 2
-                        context.startActivity(intent3)
-                    }
-
-                    R.id.ic_alert -> {
-                        val intent4 = Intent(context, LikeActivity::class.java)//ACTIVITY_NUM = 3
-                        context.startActivity(intent4)
-                    }
-
-                    R.id.ic_android -> {
-                        val intent5 = Intent(context, ProfileActivity::class.java)//ACTIVITY_NUM = 4
-                        context.startActivity(intent5)
-                    }
+                R.id.ic_house -> {
+                    val intent1 = Intent(context, MainActivity::class.java)//ACTIVITY_NUM = 0
+                    context.startActivity(intent1)
                 }
 
+                R.id.ic_search -> {
+                    val intent2 = Intent(context, SearchActivity::class.java)//ACTIVITY_NUM = 1
+                    context.startActivity(intent2)
+                }
 
-                return false
+                R.id.ic_circle -> {
+                    val intent3 = Intent(context, ShareActivity::class.java)//ACTIVITY_NUM = 2
+                    context.startActivity(intent3)
+                }
+
+                R.id.ic_alert -> {
+                    val intent4 = Intent(context, LikeActivity::class.java)//ACTIVITY_NUM = 3
+                    context.startActivity(intent4)
+                }
+
+                R.id.ic_android -> {
+                    val intent5 = Intent(context, ProfileActivity::class.java)//ACTIVITY_NUM = 4
+                    context.startActivity(intent5)
+                }
             }
+
+
+            false
         }
     }
 }

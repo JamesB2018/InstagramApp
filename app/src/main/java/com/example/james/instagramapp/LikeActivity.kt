@@ -10,6 +10,9 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 
 class LikeActivity : AppCompatActivity() {
 
+    private val mContext = this@LikeActivity
+    private val ACTIVITY_NUM = 3
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,11 +24,15 @@ class LikeActivity : AppCompatActivity() {
         Log.d(TAG, "setupBottomNavigationView: setting up BottomNavigationView")
         val bottomNavigationViewEx = findViewById<View>(R.id.bottomNavViewBar) as BottomNavigationViewEx
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx)
+        BottomNavigationViewHelper.enableNavigation(mContext, bottomNavigationViewEx)
+        val menuItem = menu.getItem(ACTIVITY_NUM)
+        menuItem.setChecked(true)
 
     }
 
     companion object {
 
         private val TAG = "LikeActivity"
+
     }
 }
