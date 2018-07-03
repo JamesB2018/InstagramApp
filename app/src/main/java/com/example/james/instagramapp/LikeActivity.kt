@@ -25,8 +25,9 @@ class LikeActivity : AppCompatActivity() {
         val bottomNavigationViewEx = findViewById<View>(R.id.bottomNavViewBar) as BottomNavigationViewEx
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx)
         BottomNavigationViewHelper.enableNavigation(mContext, bottomNavigationViewEx)
+        val menu = bottomNavigationViewEx.menu
         val menuItem = menu.getItem(ACTIVITY_NUM)
-        menuItem.setChecked(true)
+        menuItem.isChecked = true
 
     }
 
